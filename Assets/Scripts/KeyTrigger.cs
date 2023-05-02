@@ -8,8 +8,11 @@ public class KeyTrigger : MonoBehaviour
     public Transform player;
     public GameObject FloatingText;
     public GameObject key;
+
     bool playerInRange;
     bool textDisplayed = false;
+
+    private GameObject text;
 
     void OnTriggerEnter(Collider other)
      {
@@ -29,6 +32,15 @@ public class KeyTrigger : MonoBehaviour
          {
             DisplayFloatingText();
          }
+
+         if (playerInRange && textDisplayed)
+         {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                KeyPickUp();
+                Destroy(text);
+            }
+         }
  
      }
  
@@ -42,10 +54,15 @@ public class KeyTrigger : MonoBehaviour
 
         // instantiate the prefab
         // instantiation has specific rotation and position for the key in this scene -- will have to fix for other levels
-        GameObject text = Instantiate(FloatingText, key.transform.position + offset, transform.rotation * Quaternion.Euler (180f, -60f, 180f));
+        text = Instantiate(FloatingText, key.transform.position + offset, transform.rotation * Quaternion.Euler (180f, -60f, 180f));
 
         // The font must be large to be rendered clearly. This call shrinks text to necessary size in scene
         text.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+    }
+
+    void KeyPickUp()
+    {
+        Destroy(key);
     }
 
 }
