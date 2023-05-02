@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Horizontal and Vertical are the default Unity definitions for this input
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
