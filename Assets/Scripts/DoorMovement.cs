@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorMovement : MonoBehaviour
 {
-
+    public Collider outside;
     public GameObject Door;
     private Quaternion DoorOpen;
     private Quaternion DoorClosed;
@@ -25,6 +25,7 @@ public class DoorMovement : MonoBehaviour
                 DoorClosed = Door.transform.rotation;
 
                 Door.transform.rotation = Quaternion.Lerp(DoorClosed, DoorOpen, Time.deltaTime * rotate_speed);
+                outside.enabled = true;
             }
          }
      }
