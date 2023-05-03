@@ -31,6 +31,8 @@ public class CountdownTimer : MonoBehaviour
         if (secondsInt <= 0)
         {
             currentTime = 0;
+            Application.Quit();
+            Debug.Log("ended");
         }
     }
 }
