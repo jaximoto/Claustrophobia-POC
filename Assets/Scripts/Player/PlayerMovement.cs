@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Might need to place player in scene depending on placement of other assets
         m_AudioSource = GetComponent<AudioSource>();
+       
     }
 
     void FixedUpdate()
@@ -47,5 +48,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
+        
     }
 }

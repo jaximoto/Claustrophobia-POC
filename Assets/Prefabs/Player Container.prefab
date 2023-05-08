@@ -281,6 +281,8 @@ MonoBehaviour:
   mouseSensitivity: 1000
   xRotation: 0
   playerBody: {fileID: 2111511957719545100}
+  mainCamera: {fileID: 2111511958064855457}
+  zoom: 45
 --- !u!1 &2111511958453017931
 GameObject:
   m_ObjectHideFlags: 0

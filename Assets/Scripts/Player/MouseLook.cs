@@ -6,10 +6,11 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
 
-    public float mouseSensitivity = 1000f;
+    public float mouseSensitivity = 100f;
     public float xRotation = 0f;
     public Transform playerBody;
-
+    public Camera mainCamera;
+    public float zoom = 45f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,16 @@ public class MouseLook : MonoBehaviour
         // Rotation logic from tutorial
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+
+        // Zoom Feature:
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            mainCamera.fieldOfView -= zoom;
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            mainCamera.fieldOfView += zoom;
+        }
 
     }
 }
