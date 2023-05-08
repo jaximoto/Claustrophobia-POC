@@ -9,13 +9,18 @@ public class DoorMovement : MonoBehaviour
     private Quaternion DoorOpen;
     private Quaternion DoorClosed;
     private float rotate_speed = 0.1f;
-
+    AudioSource m_DoorOpen;
+    
+    void Start () 
+    {
+        m_DoorOpen = GetComponent<AudioSource>();
+    }
+    
     void OnTriggerEnter(Collider other)
-     {
- 
+    {
          // Checks to see if tagged player GameObject enters trigger area around the nightstand
-         if (other.gameObject.tag == "Player")
-         {
+        if (other.gameObject.tag == "Player")
+        {
             if (GameObject.Find("rust_key") == null)
             {
 
@@ -27,11 +32,12 @@ public class DoorMovement : MonoBehaviour
                 Door.transform.rotation = Quaternion.Lerp(DoorClosed, DoorOpen, Time.deltaTime * rotate_speed);
                 outside.enabled = true;
             }
-         }
-     }
+        }
+    }
 
-   public void OpenDoor()
-   {
-       gameObject.SetActive(false);
-   }
+    public void OpenDoor()
+    {
+        m_DoorOpen.Play();
+        gameObject.SetActive(false);
+    }
 }

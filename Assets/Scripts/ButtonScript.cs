@@ -7,7 +7,15 @@ public class ButtonScript : MonoBehaviour
 {
     public GameObject wall1;
     public GameObject wall2;
+    AudioSource m_ButtonClick;
     bool playerInRange;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        m_ButtonClick = GetComponent<AudioSource>();
+    }
+
     void OnTriggerEnter(Collider other)
     {
 
@@ -17,18 +25,14 @@ public class ButtonScript : MonoBehaviour
             playerInRange = true;
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
         if (playerInRange)
         {
-            
+            m_ButtonClick.Play();
             Destroy(wall1);
             Destroy(wall2);
         }
