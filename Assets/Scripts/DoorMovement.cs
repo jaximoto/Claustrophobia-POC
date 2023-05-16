@@ -33,7 +33,7 @@ public class DoorMovement : MonoBehaviour
                 // Play sound effect
                 m_DoorOpen.Play();
                 Door.transform.rotation = Quaternion.Lerp(DoorClosed, DoorOpen, Time.deltaTime * rotate_speed);
-                Barrier.SetActive(false);
+                Barrier.GetComponent<BoxCollider>().enabled = false;
                 // outside.enabled = true;
             }
         }
