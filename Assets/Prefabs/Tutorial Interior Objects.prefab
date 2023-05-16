@@ -534,8 +534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b71748ea41e248e5a2443c32629efd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outside: {fileID: 0}
   Door: {fileID: 0}
+  Barrier: {fileID: 0}
 --- !u!1001 &7466959114118692184
 PrefabInstance:
   m_ObjectHideFlags: 0
