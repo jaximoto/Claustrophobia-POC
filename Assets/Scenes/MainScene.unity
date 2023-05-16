@@ -144,6 +144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Common Room
       objectReference: {fileID: 0}
+    - target: {fileID: 7207014775386721235, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8869569526214066760, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -402,9 +406,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2242124804891713916, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 06690dc9b149163429e1ee53914841d7, type: 2}
+    - target: {fileID: 3848407036481266597, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7fcfac62b5d07884ca0987363723305b, type: 2}
     - target: {fileID: 4453332467096368590, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
       propertyPath: m_Name
       value: Kitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044241735418083485, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 06690dc9b149163429e1ee53914841d7, type: 2}
+    - target: {fileID: 8105831129663889221, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9172883080424422320, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
       propertyPath: m_RootOrder
