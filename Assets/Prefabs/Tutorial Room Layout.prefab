@@ -1300,6 +1300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door Frame
       objectReference: {fileID: 0}
+    - target: {fileID: 5957726254728849434, guid: 4c164958510ea431e9ad10df2c8223d0, type: 3}
+      propertyPath: m_TagString
+      value: Barrier1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c164958510ea431e9ad10df2c8223d0, type: 3}
 --- !u!4 &7958929250452125429 stripped

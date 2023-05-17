@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
-    public GameObject wall1;
-    public GameObject wall2;
+    private GameObject wall1;
+    private GameObject wall2;
     AudioSource m_ButtonClick;
     bool playerInRange;
     
     // Start is called before the first frame update
     void Start()
     {
+        wall1 = GameObject.Find("Dresser Wall1");
+        wall2 = GameObject.Find("Dresser Wall2");
         m_ButtonClick = GetComponent<AudioSource>();
     }
 

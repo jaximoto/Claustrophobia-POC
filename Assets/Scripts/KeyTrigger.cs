@@ -5,10 +5,10 @@ using UnityEngine;
 public class KeyTrigger : MonoBehaviour
 {
   
-    public Transform player;
+    //public Transform player;
     public GameObject FloatingText;
     public GameObject key;
-    public GameObject nightstand;
+    private GameObject nightstand;
     AudioSource m_PickUp;
     bool playerInRange;
     bool textDisplayed = false;
@@ -17,6 +17,7 @@ public class KeyTrigger : MonoBehaviour
 
     void Start()
     {
+        nightstand = GameObject.Find("NightstandDetail01");
         m_PickUp = nightstand.GetComponent<AudioSource>();
     }
 
