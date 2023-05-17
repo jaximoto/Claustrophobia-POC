@@ -8,6 +8,7 @@ public class MouseLook : MonoBehaviour
 
     public float mouseSensitivity = 100f;
     public float xRotation = 0f;
+    
     public Transform playerBody;
     public Camera mainCamera;
     public float zoom = 45f;
@@ -16,6 +17,7 @@ public class MouseLook : MonoBehaviour
     {
         // Removes mouse from being visible on the scene; sometimes buggy for me
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class MouseLook : MonoBehaviour
 
         // -= prevents weird rotation
         xRotation -= mouseY;
+        
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         // Rotation logic from tutorial

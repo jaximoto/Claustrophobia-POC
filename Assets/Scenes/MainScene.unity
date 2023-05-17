@@ -209,6 +209,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1083896778389818183, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6415038039704186665, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
       propertyPath: m_Name
       value: Common Room
@@ -471,6 +475,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 421456443503120945, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4453332467096368590, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
       propertyPath: m_Name
       value: Kitchen
@@ -528,6 +536,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3942576827435205957, guid: 0d25ab03439091a4ca4c73a9a00df4f6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4206443437708906400, guid: 0d25ab03439091a4ca4c73a9a00df4f6, type: 3}
       propertyPath: m_Name
       value: Level1 Hallway
@@ -758,6 +770,10 @@ PrefabInstance:
     - target: {fileID: 4533905792795280812, guid: c5db506b95ce58d42bd9e2db0efe8a08, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958929250673045440, guid: c5db506b95ce58d42bd9e2db0efe8a08, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8522329099763237877, guid: c5db506b95ce58d42bd9e2db0efe8a08, type: 3}
       propertyPath: m_Name
