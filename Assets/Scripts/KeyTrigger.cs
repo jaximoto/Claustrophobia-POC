@@ -8,11 +8,17 @@ public class KeyTrigger : MonoBehaviour
     public Transform player;
     public GameObject FloatingText;
     public GameObject key;
-
+    public GameObject nightstand;
+    AudioSource m_PickUp;
     bool playerInRange;
     bool textDisplayed = false;
 
     private GameObject text;
+
+    void Start()
+    {
+        m_PickUp = nightstand.GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter(Collider other)
      {
@@ -37,6 +43,7 @@ public class KeyTrigger : MonoBehaviour
          {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if (!(m_PickUp.isPlaying)) m_PickUp.Play();
                 KeyPickUp();
                 Destroy(text);
             }

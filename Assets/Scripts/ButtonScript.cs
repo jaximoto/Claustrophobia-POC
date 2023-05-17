@@ -19,9 +19,10 @@ public class ButtonScript : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        // Checks to see if tagged player GameObject enters trigger area around the nightstand
+        // Checks to see if tagged player GameObject enters trigger area around the button
         if (other.gameObject.tag == "Player")
         {
+            m_ButtonClick.Play();
             playerInRange = true;
         }
     }
@@ -32,7 +33,6 @@ public class ButtonScript : MonoBehaviour
     {
         if (playerInRange)
         {
-            m_ButtonClick.Play();
             Destroy(wall1);
             Destroy(wall2);
         }
