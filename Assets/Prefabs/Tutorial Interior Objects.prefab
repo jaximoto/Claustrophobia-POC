@@ -501,6 +501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43eee9f9554092940955b82111321ef9, type: 3}
+--- !u!1 &1209605194259958482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8599225754459074761, guid: 43eee9f9554092940955b82111321ef9, type: 3}
+  m_PrefabInstance: {fileID: 7466959114023303707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5009436028354726556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2457523139892605063, guid: 43eee9f9554092940955b82111321ef9, type: 3}
@@ -522,8 +527,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.104908, y: 3.1409404, z: 2.4762754}
+  m_Center: {x: -0.03614521, y: 0.5704648, z: 0.23813772}
 --- !u!82 &7466959114904864611
 AudioSource:
   m_ObjectHideFlags: 0
@@ -632,8 +637,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b71748ea41e248e5a2443c32629efd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 0}
+  Door: {fileID: 1209605194259958482}
   Barrier: {fileID: 0}
+  Key: {fileID: 7110701999497261763}
 --- !u!1001 &7466959114118692184
 PrefabInstance:
   m_ObjectHideFlags: 0
