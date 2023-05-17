@@ -45,6 +45,11 @@ public class DoorMovement : MonoBehaviour
         // Play sound effect
         m_DoorOpen.Play();
         Door.transform.rotation = Quaternion.Lerp(DoorClosed, DoorOpen, Time.deltaTime * rotate_speed);
+        if (DoorNumber == 2)
+        {
+            Application.Quit();
+            Debug.Log("game ended");
+        } 
         Barrier.SetActive(false);
         Locked = false;
     }
