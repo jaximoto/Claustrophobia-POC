@@ -98,7 +98,7 @@ MonoBehaviour:
   player: {fileID: 0}
   FloatingText: {fileID: 2135521378715340081, guid: 72c9dc62197e54f399e6cff5a8cf558c, type: 3}
   key: {fileID: 7110701999497261763}
-  nightstand: {fileID: 7464970830000100670}
+  nightstand: {fileID: 7465660784897378604}
 --- !u!82 &1515244437
 AudioSource:
   m_ObjectHideFlags: 0
@@ -882,3 +882,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &7465660784897378604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316309115743696, guid: 547cb090302650a45a642efa6818188c, type: 3}
+  m_PrefabInstance: {fileID: 7466959114432505084}
+  m_PrefabAsset: {fileID: 0}

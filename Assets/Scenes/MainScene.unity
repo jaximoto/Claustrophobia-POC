@@ -272,6 +272,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1918857599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7464970830000100670, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
+  m_PrefabInstance: {fileID: 7466959114704917791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1235412742915700357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -401,6 +406,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 147716236, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
+      propertyPath: nightstand
+      value: 
+      objectReference: {fileID: 1918857599}
     - target: {fileID: 4453332467096368590, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
       propertyPath: m_Name
       value: Kitchen
