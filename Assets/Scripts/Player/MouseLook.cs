@@ -1,40 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 // Mouse movement implemented following YouTube tutorial: https://www.youtube.com/watch?v=_QajrabyTJc
 public class MouseLook : MonoBehaviour
 {
-
-    public float mouseSensitivity = 100f;
+    [SerializeField][Range(0.0f, 0.5f)] float mouseSmoothTime = 0.03f;
+    public float mouseSensitivity;
     public float xRotation = 0f;
-    
+    float cameraPitch = 0.0f;
+    Vector2 currentMouseDelta = Vector2.zero;
+    Vector2 currentMouseDeltaVelocity = Vector2.zero;
+
     public Transform playerBody;
     public Camera mainCamera;
     public float zoom = 45f;
+    bool lockCursor = true;
     // Start is called before the first frame update
     void Start()
     {
         // Removes mouse from being visible on the scene; sometimes buggy for me
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if(lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Mouse X/Y is a Unity default definition for mouse location input
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-        // -= prevents weird rotation
-        xRotation -= mouseY;
-        
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        // Rotation logic from tutorial
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+        UpdateMouseLook();
 
         // Zoom Feature:
         if (Input.GetKeyDown(KeyCode.Space))
@@ -45,6 +43,20 @@ public class MouseLook : MonoBehaviour
         {
             mainCamera.fieldOfView += zoom;
         }
+
+    }
+    void UpdateMouseLook()
+    {
+        Vector2 targetMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+
+        currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targetMouseDelta,  ref currentMouseDeltaVelocity, mouseSmoothTime);
+        cameraPitch -= currentMouseDelta.y * mouseSensitivity;
+
+        cameraPitch = Mathf.Clamp(cameraPitch, -90.0f, 90.0f);
+
+        transform.localEulerAngles = Vector3.right * cameraPitch;
+        playerBody.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
+
 
     }
 }
