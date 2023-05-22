@@ -123,6 +123,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &106434551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7958929251011886217, guid: c5db506b95ce58d42bd9e2db0efe8a08, type: 3}
+  m_PrefabInstance: {fileID: 7958929250916987774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &396842648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 755228027666626979, guid: c5db506b95ce58d42bd9e2db0efe8a08, type: 3}
+  m_PrefabInstance: {fileID: 7958929250916987774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &855011745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -601,6 +611,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tutorial Interior Objects
       objectReference: {fileID: 0}
+    - target: {fileID: 7466959114372150999, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1244059201}
+    - target: {fileID: 7466959114372150999, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
+      propertyPath: nightstand
+      value: 
+      objectReference: {fileID: 1918857599}
+    - target: {fileID: 7466959114904864611, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
+      propertyPath: Pan2D
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 7466959114904864614, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
+      propertyPath: Barrier
+      value: 
+      objectReference: {fileID: 396842648}
+    - target: {fileID: 7466959115203842860, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
+      propertyPath: wall1
+      value: 
+      objectReference: {fileID: 1690619028}
+    - target: {fileID: 7466959115203842860, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
+      propertyPath: wall2
+      value: 
+      objectReference: {fileID: 106434551}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
 --- !u!1001 &7958929250916987774
