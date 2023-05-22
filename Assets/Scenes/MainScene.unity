@@ -140,10 +140,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1083896778389818183, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6415038039704186665, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
       propertyPath: m_Name
       value: Common Room
