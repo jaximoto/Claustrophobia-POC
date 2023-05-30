@@ -5,13 +5,19 @@ using UnityEngine;
 public class LightSwitchTrigger : MonoBehaviour
 {
     public Transform player;
-    public GameObject FloatingText;
+    public Light room_lighting;
+    public GameObject FloatingTextLightOff;
+    public GameObject FloatingTextLightOn;
     public GameObject lightSwitch;
     AudioSource m_PickUp;
     bool playerInRange;
     bool textDisplayed = false;
-
-    private GameObject text;
+    
+    bool lightOff = false;
+    
+    
+    private GameObject textOff;
+    private GameObject textOn; 
 
 
     void OnTriggerEnter(Collider other)
@@ -23,6 +29,16 @@ public class LightSwitchTrigger : MonoBehaviour
              playerInRange = true;
          }
      }
+
+     void OnTriggerExit(Collider other)
+     {
+ 
+         // Checks to see if tagged player GameObject enters trigger area around the nightstand
+         if (other.gameObject.tag == "Player")
+         {
+             playerInRange = false;
+         }
+     }
  
     void Update()
      {
@@ -30,23 +46,30 @@ public class LightSwitchTrigger : MonoBehaviour
          // call to display Pick Up Object text
          if (playerInRange && !textDisplayed)
          {
-            DisplayFloatingText();
+            DisplayFloatingOffText();
             Debug.Log("Player in range");
          }
 
-         if (playerInRange && textDisplayed)
-         {
-            if (Input.GetKeyDown(KeyCode.E))
+        if (playerInRange)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && !lightOff)
             {
-                Destroy(text);
+                Destroy(textOff);
                 turnOffLight();
             }
-         }
+
+            if (Input.GetKeyDown(KeyCode.F) && lightOff)
+            {
+                Destroy(textOn);
+                turnOnLight();
+            }
+        }
  
      }
  
 
-    void DisplayFloatingText()
+    // function to display "press e to turn off" text
+    void DisplayFloatingOffText()
     {
         // turns off call in update to display text; otherwise this function is called indefinitely
         textDisplayed = true;
@@ -55,15 +78,39 @@ public class LightSwitchTrigger : MonoBehaviour
 
         // instantiate the prefab
         // instantiation has specific rotation and position for the switch in this scene 
-        text = Instantiate(FloatingText, lightSwitch.transform.position, transform.rotation * Quaternion.Euler (0f, 180f, 0f));
+        textOff = Instantiate(FloatingTextLightOff, lightSwitch.transform.position, transform.rotation * Quaternion.Euler (0f, 180f, 0f));
 
         // The font must be large to be rendered clearly. This call shrinks text to necessary size in scene
-        text.transform.localScale = new Vector3(0.025f, 0.025f, 0.025f);
+        textOff.transform.localScale = new Vector3(0.025f, 0.025f, 0.025f);
     }
+
+   void DisplayFloatingOnText()
+    {
+        Vector3 offset = new Vector3 (1f, 0.5f, 0f);
+
+        // instantiate the prefab
+        // instantiation has specific rotation and position for the switch in this scene 
+        textOn = Instantiate(FloatingTextLightOn, lightSwitch.transform.position, transform.rotation * Quaternion.Euler (0f, 180f, 0f));
+
+        // The font must be large to be rendered clearly. This call shrinks text to necessary size in scene
+        textOn.transform.localScale = new Vector3(0.025f, 0.025f, 0.025f);
+    } 
 
     void turnOffLight()
     {
-        Debug.Log("light off");
+        room_lighting.intensity = 0f;
+        Debug.Log("Light off");
+        DisplayFloatingOnText();
+        lightOff = true;
     }
+
+    void turnOnLight()
+    {
+        room_lighting.intensity = 1f;
+        Debug.Log("Light on");
+        DisplayFloatingOffText();
+        lightOff = false;
+    }
+
 
 }
