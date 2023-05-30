@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2b2352407c292438e852caccf08f6df2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {instanceID: 0}
+  - FloatingText: {fileID: 2135521378715340081, guid: 72c9dc62197e54f399e6cff5a8cf558c, type: 3}
+  - lightSwitch: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
