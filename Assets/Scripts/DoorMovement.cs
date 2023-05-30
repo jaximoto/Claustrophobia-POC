@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class DoorMovement : MonoBehaviour
@@ -8,6 +9,7 @@ public class DoorMovement : MonoBehaviour
     // public Collider outside;
     public GameObject Door; // should be "01_low"
     public int DoorNumber;
+    public GameObject LoadingScreenUI;
     private GameObject Barrier; // should be "Locked Barrier"
     private GameObject Key; // should be "rust_key"
     private bool Locked = true;
@@ -21,6 +23,7 @@ public class DoorMovement : MonoBehaviour
         m_DoorOpen = GetComponent<AudioSource>();
         Barrier = GameObject.FindWithTag(String.Format("Barrier{0}", DoorNumber));
         Key = GameObject.FindWithTag(String.Format("Key{0}", DoorNumber));
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -45,12 +48,12 @@ public class DoorMovement : MonoBehaviour
         // Play sound effect
         m_DoorOpen.Play();
         Door.transform.rotation = Quaternion.Lerp(DoorClosed, DoorOpen, Time.deltaTime * rotate_speed);
-        if (DoorNumber == 2)
+        if(DoorNumber == 2)
         {
-            Application.Quit();
-            Debug.Log("game ended");
-        } 
+            LoadingScreenUI.SetActive(true);
+        }
         Barrier.SetActive(false);
         Locked = false;
     }
+    
 }

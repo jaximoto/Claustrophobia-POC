@@ -123,16 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &106434551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7958929251011886217, guid: c5db506b95ce58d42bd9e2db0efe8a08, type: 3}
-  m_PrefabInstance: {fileID: 7958929250916987774}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &396842648 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 755228027666626979, guid: c5db506b95ce58d42bd9e2db0efe8a08, type: 3}
-  m_PrefabInstance: {fileID: 7958929250916987774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &855011745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190,6 +180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
+--- !u!1 &1018530396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2759782470806970087, guid: 70d1a70bfcc58664dad4c4b819f76278, type: 3}
+  m_PrefabInstance: {fileID: 2759782471898884613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1066130156 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2111511958064855457, guid: 2a69025affca8cc4ea8c61ee6159fac0, type: 3}
@@ -398,15 +393,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2759782471659816558, guid: 70d1a70bfcc58664dad4c4b819f76278, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -16.094
       objectReference: {fileID: 0}
     - target: {fileID: 2759782471659816558, guid: 70d1a70bfcc58664dad4c4b819f76278, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 2759782471659816558, guid: 70d1a70bfcc58664dad4c4b819f76278, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.945
       objectReference: {fileID: 0}
     - target: {fileID: 2759782471659816558, guid: 70d1a70bfcc58664dad4c4b819f76278, type: 3}
       propertyPath: m_LocalRotation.w
@@ -506,6 +501,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1809075231, guid: 0d25ab03439091a4ca4c73a9a00df4f6, type: 3}
+      propertyPath: LoadingScreenUI
+      value: 
+      objectReference: {fileID: 1018530396}
     - target: {fileID: 4206443437708906400, guid: 0d25ab03439091a4ca4c73a9a00df4f6, type: 3}
       propertyPath: m_Name
       value: Level1 Hallway
@@ -668,30 +667,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tutorial Interior Objects
       objectReference: {fileID: 0}
-    - target: {fileID: 7466959114372150999, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1244059201}
-    - target: {fileID: 7466959114372150999, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
-      propertyPath: nightstand
-      value: 
-      objectReference: {fileID: 1918857599}
-    - target: {fileID: 7466959114904864611, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
-      propertyPath: Pan2D
-      value: 0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 7466959114904864614, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
-      propertyPath: Barrier
-      value: 
-      objectReference: {fileID: 396842648}
-    - target: {fileID: 7466959115203842860, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
-      propertyPath: wall1
-      value: 
-      objectReference: {fileID: 1690619028}
-    - target: {fileID: 7466959115203842860, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
-      propertyPath: wall2
-      value: 
-      objectReference: {fileID: 106434551}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb4e36d41d05edb458c2b2d0e080bb1c, type: 3}
 --- !u!1001 &7958929250916987774

@@ -635,6 +635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Door: {fileID: 1209605194259958482}
   DoorNumber: 1
+  LoadingScreenUI: {fileID: 0}
 --- !u!1001 &7466959114118692184
 PrefabInstance:
   m_ObjectHideFlags: 0

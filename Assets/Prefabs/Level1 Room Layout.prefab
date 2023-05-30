@@ -1134,6 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Door: {fileID: 5471441118093222298}
   DoorNumber: 2
+  LoadingScreenUI: {fileID: 0}
 --- !u!4 &2207327523750814164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2457523139892605063, guid: 43eee9f9554092940955b82111321ef9, type: 3}
