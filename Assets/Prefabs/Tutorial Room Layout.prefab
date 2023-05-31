@@ -1378,6 +1378,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7878521565170909034, guid: 7f92e855cdabfb5468e25e38b4f13551, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878521565170909035, guid: 7f92e855cdabfb5468e25e38b4f13551, type: 3}
       propertyPath: m_Name
       value: Ceiling
@@ -1390,3 +1394,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878521565170908951, guid: 7f92e855cdabfb5468e25e38b4f13551, type: 3}
   m_PrefabInstance: {fileID: 8583886727815684009}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1906771831912718530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7878521565170909035, guid: 7f92e855cdabfb5468e25e38b4f13551, type: 3}
+  m_PrefabInstance: {fileID: 8583886727815684009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &170656017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906771831912718530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b753c83d329954e940c970cd3c20f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 30
+  speed: 0.25
+  level: Level 1
