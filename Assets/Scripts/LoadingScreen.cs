@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LoadingScreen : MonoBehaviour
 {
+    public string levelName;
     public CanvasGroup canvasGroup;
     private void OnEnable()
     {
@@ -21,6 +22,6 @@ public class LoadingScreen : MonoBehaviour
             yield return null;
         }
         canvasGroup.alpha = 1;
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene(levelName);
     }
 }
