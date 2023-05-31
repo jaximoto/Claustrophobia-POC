@@ -28,7 +28,7 @@ public class Ceiling : MonoBehaviour
     void Update()
     {
         currentTime = Time.timeSinceLevelLoad;
-        Debug.Log(currentTime);
+        //Debug.Log(currentTime);
         if (startTime + currentTime > delay)
         {
             MoveCeiling();
