@@ -52,7 +52,9 @@ public class MouseLook : MonoBehaviour
         currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targetMouseDelta,  ref currentMouseDeltaVelocity, mouseSmoothTime);
         cameraPitch -= currentMouseDelta.y * mouseSensitivity;
 
-        cameraPitch = Mathf.Clamp(cameraPitch, -90.0f, 90.0f);
+        // Limits player view to make movement a bit easier
+        //cameraPitch = Mathf.Clamp(cameraPitch, -90.0f, 90.0f);
+        cameraPitch = Mathf.Clamp(cameraPitch, -45.0f, 45.0f);
 
         transform.localEulerAngles = Vector3.right * cameraPitch;
         playerBody.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
