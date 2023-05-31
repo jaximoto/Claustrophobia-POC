@@ -14,7 +14,7 @@ public class Doors : MonoBehaviour
     private bool Locked = true;
     private Quaternion DoorOpen;
     private Quaternion DoorClosed;
-    private float rotate_speed = 0.1f;
+    //private float rotate_speed = 0.1f;
     private AudioSource m_DoorOpen;
 
     void Start()
