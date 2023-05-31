@@ -18,7 +18,7 @@ public class Ceiling : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startTime = Time.time;
+        startTime = Time.timeSinceLevelLoad;
         fallingCeiling = GetComponent<Transform>();
 
         // startingTime = Time.Now();
@@ -27,7 +27,8 @@ public class Ceiling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime = Time.time;
+        currentTime = Time.timeSinceLevelLoad;
+        Debug.Log(currentTime);
         if (startTime + currentTime > delay)
         {
             MoveCeiling();
