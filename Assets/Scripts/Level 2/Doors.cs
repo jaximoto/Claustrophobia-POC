@@ -43,11 +43,12 @@ public class Doors : MonoBehaviour
 
     public void OpenDoor()
     {
-        DoorOpen = Door.transform.rotation = Quaternion.Euler(-90, 90, 0);
         DoorClosed = Door.transform.rotation;
+        DoorOpen = Door.transform.rotation = Quaternion.Euler(-90, 0, 0);
         // Play sound effect
         m_DoorOpen.Play();
-        Door.transform.rotation = Quaternion.Lerp(DoorClosed, DoorOpen, Time.deltaTime * rotate_speed);
+        //Door.transform.rotation = Quaternion.Lerp(DoorClosed, DoorOpen, Time.deltaTime * rotate_speed);
+        Debug.Log(Door.transform.rotation);
         if (DoorNumber == 2)
         {
             LoadingScreenUI.SetActive(true);
