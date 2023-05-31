@@ -48,12 +48,12 @@ public class Doors : MonoBehaviour
         // Play sound effect
         m_DoorOpen.Play();
         //Door.transform.rotation = Quaternion.Lerp(DoorClosed, DoorOpen, Time.deltaTime * rotate_speed);
-        Debug.Log(Door.transform.rotation);
+        //Debug.Log(Door.transform.rotation);
         if (DoorNumber == 2)
         {
             LoadingScreenUI.SetActive(true);
         }
-        Barrier.SetActive(false);
+        Barrier.GetComponent<BoxCollider>().enabled = false;
         Locked = false;
     }
 }
