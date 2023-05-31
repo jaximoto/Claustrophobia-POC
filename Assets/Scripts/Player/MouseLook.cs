@@ -53,8 +53,8 @@ public class MouseLook : MonoBehaviour
         cameraPitch -= currentMouseDelta.y * mouseSensitivity;
 
         // Limits player view to make movement a bit easier
-        //cameraPitch = Mathf.Clamp(cameraPitch, -90.0f, 90.0f);
-        cameraPitch = Mathf.Clamp(cameraPitch, -45.0f, 45.0f);
+        cameraPitch = Mathf.Clamp(cameraPitch, -90.0f, 90.0f);
+       // cameraPitch = Mathf.Clamp(cameraPitch, -45.0f, 45.0f);
 
         transform.localEulerAngles = Vector3.right * cameraPitch;
         playerBody.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
