@@ -9,7 +9,7 @@ public class LightSwitchTrigger : MonoBehaviour
     public GameObject FloatingTextLightOff;
     public GameObject FloatingTextLightOn;
     public GameObject lightSwitch;
-    AudioSource m_PickUp;
+    AudioSource m_Switch;
     bool playerInRange;
     bool textDisplayed = false;
     
@@ -18,6 +18,10 @@ public class LightSwitchTrigger : MonoBehaviour
     
     private GameObject textOff;
     private GameObject textOn; 
+
+    void Start() {
+        m_Switch = lightSwitch.GetComponent<AudioSource>();
+    }
 
 
     void OnTriggerEnter(Collider other)
@@ -56,6 +60,7 @@ public class LightSwitchTrigger : MonoBehaviour
             {
                 Destroy(textOff);
                 turnOffLight();
+
             }
 
             if (Input.GetKeyDown(KeyCode.F) && lightOff)
@@ -98,7 +103,9 @@ public class LightSwitchTrigger : MonoBehaviour
 
     void turnOffLight()
     {
-        room_lighting.intensity = 0f;
+        m_Switch.Play();
+        room_lighting.enabled = false;
+        //room_lighting.intensity = 0f;
         Debug.Log("Light off");
         DisplayFloatingOnText();
         lightOff = true;
@@ -106,7 +113,9 @@ public class LightSwitchTrigger : MonoBehaviour
 
     void turnOnLight()
     {
-        room_lighting.intensity = 1f;
+        m_Switch.Play();
+        room_lighting.enabled = true;
+        //room_lighting.intensity = 1f;
         Debug.Log("Light on");
         DisplayFloatingOffText();
         lightOff = false;
