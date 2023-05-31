@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f7d231e6c650f4cb1d32960be33a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelName: Level 3
   canvasGroup: {fileID: 1018530401}
 --- !u!1 &2759782470876052027
 GameObject:
