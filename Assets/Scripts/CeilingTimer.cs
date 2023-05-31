@@ -19,7 +19,7 @@ public class CeilingTimer : MonoBehaviour
     {
         Ceiling = CeilingGO.transform.position[1];
         // difference between ceiling height and player height
-        Distance = Ceiling - 2.0f;
+        Distance = Ceiling - 3.3f;
 
         // startingTime = Time.Now();
     }
@@ -27,7 +27,9 @@ public class CeilingTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // lerping ceiling height based on time in game
+        if (levelTimeSeconds > Time.realtimeSinceStartup)
+        {
+            // lerping ceiling height based on time in game
         currentTime = Time.deltaTime;
         float ratio = currentTime / levelTimeSeconds;
         NewCeilingHeight =  ratio * Distance;
@@ -35,7 +37,8 @@ public class CeilingTimer : MonoBehaviour
         //CeilingGO.transform.position = Ceiling - NewCeilingHeight;
         CeilingGO.transform.position = CeilingGO.transform.position + (Vector3.down * NewCeilingHeight);
         //Debug.Log(CeilingGO.transform.position);
-        if (levelTimeSeconds <= Time.realtimeSinceStartup)
+        }
+        else
         {
             currentTime = 0;
             Application.Quit();
