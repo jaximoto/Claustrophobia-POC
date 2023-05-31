@@ -9,6 +9,7 @@ public class LightSwitchTrigger : MonoBehaviour
     public GameObject FloatingTextLightOff;
     public GameObject FloatingTextLightOn;
     public GameObject lightSwitch;
+    GameObject hintText;
     AudioSource m_Switch;
     bool playerInRange;
     bool textDisplayed = false;
@@ -21,6 +22,8 @@ public class LightSwitchTrigger : MonoBehaviour
 
     void Start() {
         m_Switch = lightSwitch.GetComponent<AudioSource>();
+        hintText = GameObject.Find("Hint");
+        hintText.SetActive(false);
     }
 
 
@@ -105,6 +108,7 @@ public class LightSwitchTrigger : MonoBehaviour
     {
         m_Switch.Play();
         room_lighting.enabled = false;
+        hintText.SetActive(true);
         //room_lighting.intensity = 0f;
         Debug.Log("Light off");
         DisplayFloatingOnText();
@@ -114,6 +118,7 @@ public class LightSwitchTrigger : MonoBehaviour
     void turnOnLight()
     {
         m_Switch.Play();
+        hintText.SetActive(false);
         room_lighting.enabled = true;
         //room_lighting.intensity = 1f;
         Debug.Log("Light on");
