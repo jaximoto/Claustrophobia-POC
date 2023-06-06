@@ -17,6 +17,8 @@ public class MouseLook : MonoBehaviour
     public Camera mainCamera;
     public float zoom = 45f;
     bool lockCursor = true;
+    Ray ray;
+    Vector3 middleOfCamera = new Vector3(0.5f, 0.5f, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class MouseLook : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+        
         
     }
 
@@ -43,6 +46,7 @@ public class MouseLook : MonoBehaviour
         {
             mainCamera.fieldOfView += zoom;
         }
+        CheckForColliders();
 
     }
     void UpdateMouseLook()
@@ -60,5 +64,14 @@ public class MouseLook : MonoBehaviour
         playerBody.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
 
 
+    }
+
+    void CheckForColliders()
+    {
+        ray = Camera.main.ViewportPointToRay(middleOfCamera);
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            Debug.Log(hit.collider.gameObject.name + " was hit!");
+        }
     }
 }
