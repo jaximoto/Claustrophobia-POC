@@ -180,6 +180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70d1a70bfcc58664dad4c4b819f76278, type: 3}
+--- !u!82 &790773069 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1263080370, guid: e5b7b148db756e646ac8e951fb268b5d, type: 3}
+  m_PrefabInstance: {fileID: 7490698939016367949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1273988514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -351,6 +356,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a69025affca8cc4ea8c61ee6159fac0, type: 3}
+--- !u!82 &1532342226 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7820679, guid: e5b7b148db756e646ac8e951fb268b5d, type: 3}
+  m_PrefabInstance: {fileID: 7490698939016367949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1760373012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2759782470806970087, guid: 70d1a70bfcc58664dad4c4b819f76278, type: 3}
@@ -579,6 +589,22 @@ PrefabInstance:
       propertyPath: LoadingScreenUI
       value: 
       objectReference: {fileID: 1760373012}
+    - target: {fileID: 7490698937623562816, guid: e5b7b148db756e646ac8e951fb268b5d, type: 3}
+      propertyPath: m_PickUp
+      value: 
+      objectReference: {fileID: 790773069}
+    - target: {fileID: 7490698937623562816, guid: e5b7b148db756e646ac8e951fb268b5d, type: 3}
+      propertyPath: displayText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490698937646527517, guid: e5b7b148db756e646ac8e951fb268b5d, type: 3}
+      propertyPath: m_PickUp
+      value: 
+      objectReference: {fileID: 1532342226}
+    - target: {fileID: 7490698937646527517, guid: e5b7b148db756e646ac8e951fb268b5d, type: 3}
+      propertyPath: displayText
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7490698939369055190, guid: e5b7b148db756e646ac8e951fb268b5d, type: 3}
       propertyPath: m_RootOrder
       value: 4
