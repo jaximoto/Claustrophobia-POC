@@ -39,7 +39,7 @@ public class KeyTrigger : MonoBehaviour
          {
             DisplayFloatingText();
          }
-
+         /*
          if (playerInRange && textDisplayed)
          {
             if (Input.GetKeyDown(KeyCode.E))
@@ -49,7 +49,7 @@ public class KeyTrigger : MonoBehaviour
                 Destroy(text);
             }
          }
- 
+         */
      }
  
 
@@ -68,7 +68,7 @@ public class KeyTrigger : MonoBehaviour
         text.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
     }
 
-    void KeyPickUp()
+    public void KeyPickUp()
     {
         Destroy(key);
     }
