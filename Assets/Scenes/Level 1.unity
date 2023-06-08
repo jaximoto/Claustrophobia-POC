@@ -150,6 +150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 403165700, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
+      propertyPath: delay
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 741042891, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
       propertyPath: player
       value: 
@@ -230,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b753c83d329954e940c970cd3c20f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 30
+  delay: 360
   speed: 0.25
   level: Level 1
 --- !u!1 &1018530396 stripped
