@@ -323,7 +323,7 @@ MonoBehaviour:
   playerBody: {fileID: 2111511957719545100}
   mainCamera: {fileID: 2111511958064855457}
   zoom: 45
-  maxRayDistance: 15
+  maxRayDistance: 3
   layertoHit:
     serializedVersion: 2
     m_Bits: 128

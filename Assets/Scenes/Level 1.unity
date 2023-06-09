@@ -475,10 +475,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2111511958064855459, guid: 2a69025affca8cc4ea8c61ee6159fac0, type: 3}
-      propertyPath: maxRayDistance
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2146950364524254330, guid: 2a69025affca8cc4ea8c61ee6159fac0, type: 3}
       propertyPath: m_Name
       value: Player Container
