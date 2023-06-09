@@ -34,7 +34,7 @@ public class BridgeButton : MonoBehaviour
             }
         }
 
-        
+        Debug.Log(bridgeLife.ToString());
     }
     void OnTriggerEnter(Collider other)
     {
