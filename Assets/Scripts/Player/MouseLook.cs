@@ -17,6 +17,10 @@ public class MouseLook : MonoBehaviour
     public Camera mainCamera;
     public float zoom = 45f;
     bool lockCursor = true;
+    Ray ray;
+    public float maxRayDistance = 10;
+    public LayerMask layertoHit;
+    Vector3 middleOfCamera = new Vector3(0.5f, 0.5f, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,7 @@ public class MouseLook : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+        
         
     }
 
@@ -43,6 +48,7 @@ public class MouseLook : MonoBehaviour
         {
             mainCamera.fieldOfView += zoom;
         }
+        CheckForColliders();
 
     }
     void UpdateMouseLook()
@@ -60,5 +66,28 @@ public class MouseLook : MonoBehaviour
         playerBody.Rotate(Vector3.up * currentMouseDelta.x * mouseSensitivity);
 
 
+    }
+
+    void CheckForColliders()
+    {
+        ray = Camera.main.ViewportPointToRay(middleOfCamera);
+        if (Physics.Raycast(ray, out RaycastHit hit, maxRayDistance, layertoHit))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+               // Debug.Log("E was hit correctly!");
+                if (hit.collider.gameObject.TryGetComponent(out Keys keyScript))
+                {
+                    keyScript.KeyPickUp();
+                    //Debug.Log("KeyPickUp() was called!");
+                }
+                else if (hit.collider.gameObject.TryGetComponent(out KeyTrigger keyTriggerScript))
+                {
+                    keyTriggerScript.KeyPickUp();
+                    //Debug.Log(keyTriggerScript.ToString() + "was found");
+                }
+            }
+            //Debug.Log(hit.collider.gameObject.name + " was hit!");
+        }
     }
 }
