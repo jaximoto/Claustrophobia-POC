@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &384832082 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5673687370588932891, guid: 95c84311f6b5c824b84cc7b8319f8f63, type: 3}
+  m_PrefabInstance: {fileID: 3473066869021130185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &403165694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3186414969002526388, guid: cec69a1a0646b964a839e9dfe5f78303, type: 3}
@@ -658,6 +663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level1 Hallway
       objectReference: {fileID: 0}
+    - target: {fileID: 4375494386058883836, guid: 0d25ab03439091a4ca4c73a9a00df4f6, type: 3}
+      propertyPath: ovendoor
+      value: 
+      objectReference: {fileID: 384832082}
     - target: {fileID: 5245033617108667148, guid: 0d25ab03439091a4ca4c73a9a00df4f6, type: 3}
       propertyPath: m_RootOrder
       value: 6

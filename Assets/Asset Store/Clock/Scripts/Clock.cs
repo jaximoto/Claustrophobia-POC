@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class Clock : MonoBehaviour {
+  public Transform ovendoor;
   public Transform player;
   //public Transform FloatingText;
   public GameObject clock;
@@ -167,7 +168,8 @@ public class Clock : MonoBehaviour {
     }
   }
 
-  void OpenDoor(){
-
+  void OpenDoor()
+  {
+    ovendoor.rotation = Quaternion.Euler(0, 0, -90);
   }
 }
