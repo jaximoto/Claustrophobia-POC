@@ -34,7 +34,7 @@ public class BridgeButton : MonoBehaviour
             }
         }
 
-        Debug.Log(bridgeLife.ToString());
+        //Debug.Log(bridgeLife.ToString());
     }
     void OnTriggerEnter(Collider other)
     {
@@ -42,11 +42,15 @@ public class BridgeButton : MonoBehaviour
         // Checks to see if tagged player GameObject enters trigger area around the button
         if (other.gameObject.tag == "Player")
         {
-            m_ButtonClick.Play();
             
-            bridgeParent.SetActive(true);
-            bridgeLife = 10f;
-            bridgeEnabled = true;
+            if (!bridgeParent.activeSelf) 
+            {
+                m_ButtonClick.Play();
+                bridgeParent.SetActive(true);
+                bridgeLife = 10f;
+                bridgeEnabled = true;
+            }
+            
         }
     }
 }

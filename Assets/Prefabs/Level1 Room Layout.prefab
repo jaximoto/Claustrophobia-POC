@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 1111504220762899329}
   - component: {fileID: 2182172681668760154}
   - component: {fileID: 6931432384801670411}
-  - component: {fileID: 1261575607}
+  - component: {fileID: 900900049}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -518,13 +518,13 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835603805488919866}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1261575607
+--- !u!114 &900900049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -533,11 +533,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1835603805488919866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d260af2f6cb448c49230011d917f702, type: 3}
+  m_Script: {fileID: 11500000, guid: 39b753c83d329954e940c970cd3c20f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTimeSeconds: 90
-  CeilingGO: {fileID: 1835603805488919866}
+  delay: 360
+  speed: 0.25
+  level: Level 1
 --- !u!1 &2814618278335108403
 GameObject:
   m_ObjectHideFlags: 0

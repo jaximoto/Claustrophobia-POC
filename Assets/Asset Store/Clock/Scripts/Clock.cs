@@ -157,7 +157,7 @@ public class Clock : MonoBehaviour {
     if(!textDisplayed)
     {
 
-
+    /*
       textDisplayed = true;
       Vector3 offset = new Vector3(1f, 0.5f, 0f);
       //text = Instantiate
@@ -165,11 +165,12 @@ public class Clock : MonoBehaviour {
       text = Instantiate(FloatingText, clock.transform.position + offset, transform.rotation * Quaternion.Euler (90f, -60f, 180f));
 
       text.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+    */
     }
   }
 
   void OpenDoor()
   {
-    ovendoor.rotation = Quaternion.Euler(0, 0, -90);
+    ovendoor.rotation = Quaternion.Euler(-65, 0, 0);
   }
 }

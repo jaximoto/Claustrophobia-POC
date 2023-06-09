@@ -9,7 +9,7 @@ public class Doors : MonoBehaviour
     public GameObject Door; // should be "01_low"
     public int DoorNumber;
     public GameObject LoadingScreenUI;
-    private GameObject Barrier; // should be "Locked Barrier"
+    public GameObject Barrier; // should be "Locked Barrier"
     private GameObject Key; // should be "rust_key"
     private bool Locked = true;
     private Quaternion DoorOpen;

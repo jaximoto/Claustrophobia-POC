@@ -526,11 +526,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 438161156, guid: c868d65d275502841bf896ef86a81f4c, type: 3}
       propertyPath: delay
-      value: 35
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1338397339, guid: c868d65d275502841bf896ef86a81f4c, type: 3}
       propertyPath: delay
-      value: 360
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1752831505386146585, guid: c868d65d275502841bf896ef86a81f4c, type: 3}
       propertyPath: m_Name
