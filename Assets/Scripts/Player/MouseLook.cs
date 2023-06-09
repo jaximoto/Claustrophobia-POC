@@ -87,7 +87,7 @@ public class MouseLook : MonoBehaviour
                     //Debug.Log(keyTriggerScript.ToString() + "was found");
                 }
             }
-            //Debug.Log(hit.collider.gameObject.name + " was hit!");
+            Debug.Log(hit.collider.gameObject.name + " was hit!");
         }
     }
 }
