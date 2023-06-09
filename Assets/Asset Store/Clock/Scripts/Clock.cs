@@ -2,8 +2,6 @@ using UnityEngine;
 using System.Collections;
 
 public class Clock : MonoBehaviour {
-
-	//-- set start time 00:00
   public Transform player;
   //public Transform FloatingText;
   public GameObject clock;
@@ -19,9 +17,9 @@ public class Clock : MonoBehaviour {
 
   //public int targetHour = 12;
   public bool puzzleStatus; // has the player has set the time correctly??
-  public GameObject HintText;
-  private GameObject hint;
-  bool hintDisplayed = false;
+  //public GameObject HintText;
+  //private GameObject hint;
+  //bool hintDisplayed = false;
 
 	public GameObject pointerSeconds;
   public GameObject pointerMinutes;
@@ -108,8 +106,8 @@ public class Clock : MonoBehaviour {
     }
     if(puzzleStatus)
     {
-      hintDisplayed = true;
-      DisplayHint();
+      //hintDisplayed = true;
+      OpenDoor();
       Destroy(text);
     }
 
@@ -155,7 +153,7 @@ public class Clock : MonoBehaviour {
 
   void DisplayText()
   {
-    if(!hintDisplayed)
+    if(!textDisplayed)
     {
 
 
@@ -163,23 +161,13 @@ public class Clock : MonoBehaviour {
       Vector3 offset = new Vector3(1f, 0.5f, 0f);
       //text = Instantiate
       // instantiate the prefab
-      // instantiation has specific rotation and position for the key in this scene -- will have to fix for other levels
       text = Instantiate(FloatingText, clock.transform.position + offset, transform.rotation * Quaternion.Euler (90f, -60f, 180f));
 
-      // The font must be large to be rendered clearly. This call shrinks text to necessary size in scene
       text.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
     }
   }
 
-  void DisplayHint()
-  {
-    if(text)
-    {
-      Destroy(text);
-    }
-    hintDisplayed = true;
-    Vector3 offset = new Vector3(1f, 0.5f, 0f);
-    hint = Instantiate(HintText, clock.transform.position + offset, transform.rotation * Quaternion.Euler (90f, -60f, 180f));
-  }
+  void OpenDoor(){
 
+  }
 }
