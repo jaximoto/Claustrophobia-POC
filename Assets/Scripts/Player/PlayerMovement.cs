@@ -26,23 +26,23 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        float horizontal = Input.GetAxis ("Horizontal");
-        float vertical = Input.GetAxis ("Vertical");
-        bool hasHorizontalInput = !Mathf.Approximately (horizontal, 0f);
-        bool hasVerticalInput = !Mathf.Approximately (vertical, 0f);
-        bool isWalking = hasHorizontalInput || hasVerticalInput;
+        // float horizontal = Input.GetAxis ("Horizontal");
+        // float vertical = Input.GetAxis ("Vertical");
+        // bool hasHorizontalInput = !Mathf.Approximately (horizontal, 0f);
+        // bool hasVerticalInput = !Mathf.Approximately (vertical, 0f);
+        // bool isWalking = hasHorizontalInput || hasVerticalInput;
         
-        if (isWalking)
-        {
-            if (!m_AudioSource.isPlaying)
-            {
-                m_AudioSource.Play();
-            }
-        }
-        else
-        {
-            m_AudioSource.Stop ();
-        }
+        // if (isWalking)
+        // {
+        //     if (!m_AudioSource.isPlaying)
+        //     {
+        //         m_AudioSource.Play();
+        //     }
+        // }
+        // else
+        // {
+        //     m_AudioSource.Stop ();
+        // }
     }
 
     // Update is called once per frame
@@ -59,6 +59,21 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        bool hasHorizontalInput = !Mathf.Approximately (x, 0f);
+        bool hasVerticalInput = !Mathf.Approximately (z, 0f);
+        bool isWalking = hasHorizontalInput || hasVerticalInput;
+        
+        if (isWalking)
+        {
+            if (!m_AudioSource.isPlaying)
+            {
+                m_AudioSource.Play();
+            }
+        }
+        else
+        {
+            m_AudioSource.Stop ();
+        }
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
